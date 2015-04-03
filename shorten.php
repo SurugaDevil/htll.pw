@@ -4,7 +4,7 @@
  * License: http://creativecommons.org/licenses/by/3.0/
  * Contact the author at http://briancray.com/
  */
- 
+
 ini_set('display_errors', 0);
 
 $url_to_shorten = get_magic_quotes_gpc() ? stripslashes(trim($_REQUEST['longurl'])) : trim($_REQUEST['longurl']);
@@ -18,21 +18,19 @@ if(!empty($url_to_shorten) && preg_match('|^https?://|', $url_to_shorten))
 	{
 		die('You are not allowed to shorten URLs with this service.');
 	}
-	
+
 	// check if the URL is valid
-	if(CHECK_URL)
+  if(CHECK_URL)
 	{
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url_to_shorten);
 		curl_setopt($ch,  CURLOPT_RETURNTRANSFER, TRUE);
 		$response = curl_exec($ch);
-		$response_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-		curl_close($ch);
-		if($response_status == '404')
+		curl_close($handle);
+		if(curl_getinfo($ch, CURLINFO_HTTP_CODE) == '404')
 		{
 			die('Not a valid URL');
 		}
-		
 	}
 	
 	// check if the URL has already been shortened

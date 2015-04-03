@@ -1,6 +1,12 @@
+hightechlowlife.eu's official link shortener!
+-Original idea by Ins1gnia and Miku
+-Proposed and edited for HTLL by Suruga Devil
+
+
+
+
 License: http://www.gnu.org/licenses/gpl-2.0.html
 
-Benefits
 
 - Can shorten over 42 billion unique URLs in 6 or less characters (it can do more than 12,000,000 in only 4!)
 - Super duper fast—uses very little server resources
@@ -14,8 +20,7 @@ Benefits
 - Option to store a local cache to prevent database queries on every redirect
 - Option to change the characters allowed in a shortened url
 
-Installation
-
+Installation-
 1. Make sure your server meets the requirements:
     a) Optionally you can run this from your current domain or find a short domain
     b) Apache

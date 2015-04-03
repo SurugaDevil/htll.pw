@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<title>URL shortener</title>
+<title>Official HTLL Link Shortener</title>
+<meta charset="UTF-8" />
 <meta name="robots" content="noindex, nofollow">
 </html>
 <body>
