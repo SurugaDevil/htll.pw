@@ -7,7 +7,7 @@
 
 // db options
 define('DB_NAME', 'your db name');
-define('DB_USER', 'your db usernae');
+define('DB_USER', 'your db username');
 define('DB_PASSWORD', 'your db password');
 define('DB_HOST', 'localhost');
 define('DB_TABLE', 'shortenedurls');
